@@ -28,17 +28,20 @@ student and aspiring web developer in Addis Ababa.">
     </nav>
   </header>
 <main>
-    <hr>
-
-    <h2 id="about">About Me</h2>
-    <p>I am a 3rd year<strong> Software Engineering</strong> student at AASTU. I <em>enjoy</em> turning coding puzzles into <mark>cool</mark> websites.
+    
+    <section id="about">
+    <h2>About Me</h2>
+    <p>I am a 3rd year<strong> Software Engineering</strong> student at AASTU. I <em>enjoy</em> turning coding puzzles into <mark>cool</mark> websites.</p>
+    </section>
+    <aside>
     <h2>What Inspires Me</h2>
     <blockquote>
       "Success is not final, failure is not <strong> fatal</strong> it is the <em>courage</em> to continue that counts." - Winston Churchill
     </blockquote>
     <p>My favorite daily reminder is to <q>always keep learning</q>.</p>
-    <hr>
-    <h2 id="skills">Skills</h2>
+    </aside>
+    <section id="skills">
+    <h2>Skills</h2>
     <ul>
       <li>Programming Languages
         <ul type="square">
@@ -81,23 +84,32 @@ student and aspiring web developer in Addis Ababa.">
       <dt>Git and GitHub</dt>
       <dd>Saves versions of my code and shares my projects online.</dd>
     </dl>
-
-    <hr>
-    <h2 id="projects">Projects</h2>
+    </section>
+    <section id="projects">
+    <h2 >Projects</h2>
+    <article>
     <h3>Simple Calculator</h3>
     <img src="images/project-calculator.png" alt="Simple Calculator interface">
     <p>A calculator that adds, subtracts, multiplies and divides.</p>
+    </article>
+
+    <article>
     <h3>Library Management System</h3>
     <img src="images/project-library.png" alt="Library Management System interface">
     <p>A console program for borrowing and returning books.</p>
+    </article>
+
+    <article>
     <h3>rock, paper,Scissors game</h3>
     <img src="images/rock-paper-scissor.png" alt="game interface">
     <p>tried to build simple game that we used to play.</p>
+    </article>
 
     <p><a href="projects.html">See all my projects →</a></p>
 
-    <hr>
-    <h2 id="education">Education</h2>
+    </section>
+    <section id="education">
+    <h2>Education</h2>
     <h3>BSc in Software Engineering</h3>
     <p>Addis Ababa Science and Technology University, 2024 present</p>
     <table border="1" cellpadding="8" cellspacing="0">
@@ -158,7 +170,7 @@ student and aspiring web developer in Addis Ababa.">
         </tr>
       </tfoot>
     </table>
-    <hr>
+    </section>
     <section id="contact">
     <h2>Contact</h2>
     <p>Address:<br>Addis Ababa,<br>Ethiopia</p>
@@ -169,20 +181,49 @@ student and aspiring web developer in Addis Ababa.">
     <p><a href="files/cv.pdf" download>Download my CV (PDF)</a></p>
 
     <h3>Send me a message</h3>
-    <form action="thank-you.html" method="get">
-        <fieldset>
+<form action="thank-you.html" method="post" enctype="multipart/form-data">
+          <fieldset>
             <legend>Your Details</legend>
             <label for="fullname">Full name: </label>
-            <input type="text" id="fullname" name="fullname">
+            <input type="text" id="fullname" name="fullname" required>
             <br><br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
         </fieldset>
-        
+              <fieldset>
+      <legend>Project Details</legend>
+      <label for="phone">Phone (optional): </label>
+      <input type="text" id="phone" name="phone"
+      pattern="0[79][0-9]{8}" title="10 digits starting with 09 or 07">
+      <br><br>
+      <p>Preferred contact method:</p>
+      <input type="radio" id="by-email" name="contact-method" value="email" checked>
+      <label for="by-email">Email</label>
+      <input type="radio" id="by-phone" name="contact-method" value="phone">
+      <label for="by-phone">Phone</label>
+      <br><br>
+      <label for="meeting">Preferred meeting date: </label>
+      <input type="date" id="meeting" name="meeting" min="2026-11-01">
+      <br><br>
+      <label for="weeks">Project length (weeks): </label>
+      <input type="number" id="weeks" name="weeks" min="1" max="52" step="1">
+      <br><br>
+      <label for="brief">Attach a project brief:</label>
+      <input type="file" id="brief" name="brief">
+      <br><br>
+      <label for="colour" >Preferred website colour: </label>
+      <input type="color" id="colour" name="colour" value="#1f5fa8">
+      <br><br>
+      <label for="rating">How much do you like my portfolio? (1-10)</label>
+      <input type="range" id="rating" name="rating" min="1" max="10" value="7">
+      <br><br>
+      <label for="budget">Your budget (ETB): </label>
+      <input type="number" id="budget" name="budget" min="1000" step="500">
+      </fieldset>
 <fieldset>
             <legend>Your Message</legend>
             <label for="reason">Reason for contacting me: </label>
-            <select id="reason" name="reason">
+            <select id="reason" name="reason" required>
                 <optgroup label="Work">
                     <option value="internship">Internship offer</option>
                     <option value="freelance">Freelance project</option>
@@ -196,7 +237,10 @@ student and aspiring web developer in Addis Ababa.">
             </select>
             <br><br>
             <label for="message">Message: </label><br>
-            <textarea id="message" name="message" rows="6" cols="40"></textarea>
+            <textarea id="message" name="message" rows="6" cols="40" required></textarea>
+             <br>
+            <input type="checkbox" id="copy" name="copy" value="yes">
+            <label for="copy">Send me a copy of this message</label>
         </fieldset>
 
         
