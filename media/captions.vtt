@@ -1,0 +1,49 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.500
+Rock Paper Scissors: click a hand (rock, paper or scissors) to play against the computer.
+
+2
+00:00:01.500 --> 00:00:02.500
+"reset score" sets wins, loses and draw back to 0.
+
+3
+00:00:02.500 --> 00:00:03.500
+Click rock: if the computer picks the same hand, it shows "draw" and the draw count goes up by 1.
+
+4
+00:00:03.500 --> 00:00:05.000
+The computer's hand beats yours: it shows "you lose" and loses goes up by 1.
+
+5
+00:00:05.000 --> 00:00:07.000
+Your hand beats the computer's: it shows "you won!" and wins goes up by 1.
+
+6
+00:00:07.000 --> 00:00:08.000
+Click paper and lose again: "you lose", loses is now 3.
+
+7
+00:00:08.000 --> 00:00:11.000
+Win a few rounds in a row: each "you won!" adds 1 to wins, which climbs to 4.
+
+8
+00:00:11.000 --> 00:00:13.000
+Same hand as the computer again: "draw", and draw goes up to 2.
+
+9
+00:00:13.000 --> 00:00:15.000
+Two losses in a row: loses goes from 3 up to 5.
+
+10
+00:00:15.000 --> 00:00:17.000
+Two more draws: the draw count reaches 4.
+
+11
+00:00:17.000 --> 00:00:19.000
+Another "you lose" brings loses to 6.
+
+12
+00:00:19.000 --> 00:00:21.000
+Every click shows the result and updates the score line. Click "reset score" any time to start over.
