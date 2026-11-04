@@ -8,13 +8,14 @@ student and aspiring web developer in Addis Ababa.">
 <meta name="keywords" content="Isaac Assefa, portfolio, software engineering, artificial intelligence, AI, cybersecurity">
 <meta name="author" content="Isaac Assefa">
  <title>Isaac Assefa's Portfolio</title> 
- <link rel="icon" type="image/png" href="images/favicon.png">
+ <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
 </head> 
 <body> 
   <header>
+  <canvas id="logo" width="120" height="120">Isaac Assefa logo</canvas>
   <h1>Isaac Assefa</h1>
   <img src="images/profile.JPG" alt="Isaac Assefa profile picture" width="200" height="200">
- <p>Software student learning to build realtime features on websites.</p>
+ <p>Software engineering student who is learning to build realtime features on websites.</p>
 <button type="button" onclick="document.getElementById('hireDialog').showModal()">Hire me</button>
 <dialog id="hireDialog">
   <h2>Available for internships</h2>
@@ -37,6 +38,9 @@ student and aspiring web developer in Addis Ababa.">
     <section id="about">
     <h2>About Me</h2>
     <p>I am a 3rd year<strong> Software Engineering</strong> student at AASTU. I <em>enjoy</em> turning coding puzzles into <mark>cool</mark> websites.</p>
+      <p>Languages I have used: Python, Java and C++. I am also working with JavaScript, CSS, and SQL.</p>
+<p>Fun fact: When I step away from my keyboard, you will usually find me strumming my guitar or playing football.</p>
+
     <p>My favourite tag is &lt;main&gt;, because it tells the browser where the important content is &amp; helps screen readers.</p>
     <h3>Hear my introduction</h3>
         <audio controls>
@@ -66,7 +70,7 @@ student and aspiring web developer in Addis Ababa.">
           <li>Python</li>
           <li>C++</li>
           <li>Java</li>
-          <li>JavaScript</li>
+          
         </ul>
       </li>
       <li>Web Development
@@ -74,6 +78,7 @@ student and aspiring web developer in Addis Ababa.">
           <li><abbr title="HyperText Markup Language">HTML</abbr></li>
 
           <li>CSS (learning to become better)</li>
+          <li>JavaScript(also learning)</li>
         </ul>
       </li>
       <li>Soft Skills
@@ -84,26 +89,7 @@ student and aspiring web developer in Addis Ababa.">
         </ul>
       </li>
     </ul>
-
-    <h3>My Learning Roadmap</h3>
-    <ol type="1">
-      <li>HTML structure and content</li>
-      <li>CSS layout and design</li>
-      <li>JavaScript and the DOM</li>
-      <li>PHP and databases</li>
-      <li>Deploy my portfolio online</li>
-    </ol>
-
-    <h3>Tools I Use</h3>
-    <dl>
-      <dt>VS Code</dt>
-      <dd>The code editor I use for every lab.</dd>
-      <dt>Chrome DevTools</dt>
-      <dd>Inspects the HTML of any page and helps me find mistakes.</dd>
-      <dt>Git and GitHub</dt>
-      <dd>Saves versions of my code and shares my projects online.</dd>
-    </dl>
-    <h3>Skill Levels</h3>
+        <h3>Skill Levels</h3>
   <p>
     <label for="lvl-html">HTML</label>
     <meter id="lvl-html" value="0.6" min="0" max="1">60%</meter>
@@ -128,6 +114,25 @@ student and aspiring web developer in Addis Ababa.">
     <label for="lvl-sql">SQL</label>
     <meter id="lvl-sql" value="0.5" min="0" max="1">50%</meter>
   </p>
+    <canvas id="skillChart" width="300" height="150">My Skills Bar Chart</canvas>
+    <h3>My Learning Roadmap</h3>
+    <ol type="1">
+      <li>HTML structure and content</li>
+      <li>CSS layout and design</li>
+      <li>JavaScript and the DOM</li>
+      <li>PHP and databases</li>
+      <li>Deploy my portfolio online</li>
+    </ol>
+
+    <h3>Tools I Use</h3>
+    <dl>
+      <dt>VS Code</dt>
+      <dd>The code editor I use for every lab.</dd>
+      <dt>Chrome DevTools</dt>
+      <dd>Inspects the HTML of any page and helps me find mistakes.</dd>
+      <dt>Git and GitHub</dt>
+      <dd>Saves versions of my code and shares my projects online.</dd>
+    </dl>
 
     </section>
     <section id="projects">
@@ -305,5 +310,49 @@ student and aspiring web developer in Addis Ababa.">
   <p>&copy; 2026 Isaac Assefa. All rights reserved.</p>
   <p>Last updated: <time datetime="2026-11-04">4 November 2026</time></p>
 </footer>
+<script>
+const canvas = document.getElementById('logo');
+const ctx = canvas.getContext('2d');
+
+// 1. Blue square background: x, y, width, height
+ctx.fillStyle = "#1f5fa8";
+ctx.fillRect(0, 0, 120, 120);
+
+// 2. White circle: centre x, centre y, radius, start angle, end angle
+ctx.beginPath();
+ctx.arc(60, 60, 45, 0, 2 * Math.PI);
+ctx.fillStyle = "white";
+ctx.fill();
+
+// 3. Initials in the middle
+ctx.fillStyle = "#1f5fa8";
+ctx.font = "bold 36px Arial";
+ctx.textAlign = "center";
+ctx.textBaseline = "middle";
+ctx.fillText("IA", 60, 62);
+
+// --- BAR CHART CODE ---
+  const chart = document.getElementById('skillChart');
+  const chartCtx = chart.getContext('2d');
+
+  // 1. Draw HTML Bar 
+  chartCtx.fillStyle = "#1f5fa8";
+  chartCtx.fillRect(30, 58, 40, 72); // x, y, width, height
+  chartCtx.fillStyle = "black";
+  chartCtx.font = "14px Arial";
+  chartCtx.fillText("HTML", 30, 145);
+
+  // 2. Draw Python Bar 
+  chartCtx.fillStyle = "#1f5fa8";
+  chartCtx.fillRect(130, 70, 40, 60);
+  chartCtx.fillStyle = "black";
+  chartCtx.fillText("Python", 130, 145);
+
+  // 3. Draw JavaScript Bar
+  chartCtx.fillStyle = "#1f5fa8";
+  chartCtx.fillRect(230, 106, 40, 24);
+  chartCtx.fillStyle = "black";
+  chartCtx.fillText("JavaScript", 230, 145);
+</script>
 </body> 
 </html>
